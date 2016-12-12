@@ -16,14 +16,14 @@ catch(PDOException $e)
 	echo $e->getMessage();
 }
 
-
-
 include_once "ClientDAO.php";
 include_once "PhoneDAO.php";
 include_once "AddressDAO.php";
+include_once "EmailDAO.php";
 
 $Dao = new ClientDAO($DB_con);
 $PhoneDao = new PhoneDAO($DB_con);
 $AddressDao = new AddressDAO($DB_con);
+$EmailDao   = new EmailDAO($DB_con);
 
 ?>

@@ -24,7 +24,7 @@ include"header.php";
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            
+
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
@@ -85,7 +85,7 @@ include"header.php";
             </div>   
             <!-- Pessoa Jurídica -->
             <div id="PJ"  style="display: none;">
-              
+
               <div class="form-group">
                 <label for="legalPersonRegistration" class="control-label col-md-3 col-sm-3 col-xs-12">CNPJ</label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -110,14 +110,14 @@ include"header.php";
 
             </div>
 
-             
+
             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
 
               <!-- Telefone -->
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Telefone(s)</h2>
-                  
+
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -129,7 +129,7 @@ include"header.php";
                       placeholder="Ex: celular.." onkeypress="validCharKeyPress(this.id);" >
                     </div>
                   </div>
-                  
+
                   <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Telefone <span class="required">*</span>
                     </label>
@@ -137,7 +137,7 @@ include"header.php";
                       <input type="text" id="telefone" name="telefone"  class="form-control col-md-7 col-xs-12" onClick="validCharClick(this.id);" onkeypress="validCharKeyPress(this.id);">
                     </div>
                   </div>
-                  
+
                   <div class="ln_solid"></div>
                   <div class="form-group">
                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -153,7 +153,7 @@ include"header.php";
                     </tr>
                   </thead>
                   <tbody>
-                   
+
                   </tbody>
                 </table>
 
@@ -164,12 +164,11 @@ include"header.php";
               </div>
             </div>
 
-
             <!-- Endereço -->
             <div class="x_panel">
               <div class="x_title">
                 <h2>Endereço(s)</h2>
-                
+
                 <div class="clearfix"></div>
               </div>
               <div class="x_content">
@@ -181,7 +180,7 @@ include"header.php";
                     onClick="validCharClick(this.id);" onkeypress="validCharKeyPress(this.id);" >
                   </div>
                 </div>
-                
+
                 <div class="form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12">Endereço</label>
                   <div class="col-md-9 col-sm-9 col-xs-12">
@@ -201,7 +200,7 @@ include"header.php";
                     <select class="form-control" id="estados" name="state" onchange="validCharKeyPress(this.id);" onClick="validCharClick(this.id);">
                       <option></option>
                       <option value=""></option>
-                      
+
                     </select>
                   </div>
                 </div>
@@ -211,7 +210,7 @@ include"header.php";
                   <div class="col-md-9 col-sm-9 col-xs-12">
                     <select class="form-control" name="city" id="cidades" onclick="validCharClick(this);">
                       <option value=""></option>
-                      
+
                     </select>
                   </div>
                 </div>
@@ -232,7 +231,7 @@ include"header.php";
                   </tr>
                 </thead>
                 <tbody>
-                 
+
                 </tbody>
               </table>
 
@@ -242,86 +241,139 @@ include"header.php";
           <div id="insertAddress">
             <fieldset style="display: none;"></fieldset>  
           </div>
-          
 
-          
-          <br/>
-          <br/>
-          <div class="ln_solid"></div>
-          <div class="form-group">
-            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-              <a href="index.php">
-                <button type="button" class="btn btn-primary" id="btncancel">Cancelar</button>
-              </a>
-              <button type="submit" class="btn btn-success" id="btnsave" name="btnsave">Cadastrar</button>
+
+          <!-- Email -->
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>E-mail(s)</h2>
+
+              <div class="clearfix"></div>
             </div>
-          </div>
-        </div>	
-        
-        
+            <div class="x_content">
 
-      </form>
-
-      
-      <form id="formPhone"  data-parsley-validate class="form-horizontal form-label-left" method="POST" name="formPhone" action="">
-        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-              
-              <!-- Telefone -->
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Cadastro de Telefone </h2>
-                  
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-
-                  <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Telefone <span class="required">*</span>
-                    </label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <input type="text" id="telefoneM" name="telefoneM" required="required" class="form-control col-md-7 col-xs-12">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Descrição</label>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      <input id="descricaoM"  name="descricaoM" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
-                    </div>
-                  </div>
-                  <div class="ln_solid"></div>
-                  <div class="form-group">
-                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                      <button type="submit" class="btn btn-primary">Cancel</button>
-                      <button type="submit" class="btn btn-success">Submit</button>
-                    </div>
-                  </div>
-                  
-
-                  <table class="table table-bordered" id="grid">
-                    <thead>
-                      <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                     
-                    </tbody>
-                  </table>
-
+              <div class="form-group">
+                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Descrição <span class="required">*</span></label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input id="descricaoEmail"  name="descricaoEmail" class="form-control col-md-7 col-xs-12" type="text" name="middle-name" onClick="validCharClick(this.id);"
+                  placeholder="Ex: pessoal.." onkeypress="validCharKeyPress(this.id);" >
                 </div>
               </div>
-            </div>  
-            
-            <!-- end Telefone -->
+
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Email <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="text" id="email" name="email"  class="form-control col-md-7 col-xs-12" onClick="validCharClick(this.id);" onkeypress="validCharKeyPress(this.id);">
+                </div>
+              </div>
+
+              <div class="ln_solid"></div>
+              <div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                 <input  class="btn btn-round btn-info" id="#Mail" name="#Mail" type="button" value="Adicionar"  onClick="AddMail();"/>
+               </div>
+             </div>
+             <table class="table table-bordered" id="gridMail">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Descrição</th>
+                  <th>Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+
+            <div id="insertMail">
+              <fieldset style="display: none;"></fieldset>  
+            </div>
+
           </div>
-        </div> <!-- end Modal -->
-      </form> <!-- end form Modal -->
-    </div>
+        </div>
+
+
+
+
+        <br/>
+        <br/>
+        <div class="ln_solid"></div>
+        <div class="form-group">
+          <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+            <a href="index.php">
+              <button type="button" class="btn btn-primary" id="btncancel">Cancelar</button>
+            </a>
+            <button type="submit" class="btn btn-success" id="btnsave" name="btnsave">Cadastrar</button>
+          </div>
+        </div>
+      </div>	
+
+
+
+    </form>
+
+
+    <form id="formPhone"  data-parsley-validate class="form-horizontal form-label-left" method="POST" name="formPhone" action="">
+      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+
+            <!-- Telefone -->
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Cadastro de Telefone </h2>
+
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Telefone <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="telefoneM" name="telefoneM" required="required" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Descrição</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input id="descricaoM"  name="descricaoM" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                  </div>
+                </div>
+                <div class="ln_solid"></div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <button type="submit" class="btn btn-primary">Cancel</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                  </div>
+                </div>
+
+
+                <table class="table table-bordered" id="grid">
+                  <thead>
+                    <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>  
+
+          <!-- end Telefone -->
+        </div>
+      </div> <!-- end Modal -->
+    </form> <!-- end form Modal -->
   </div>
+</div>
 </div>
 </div>
 
@@ -696,6 +748,51 @@ function AddAddress(){
 }
 </script>
 
+
+<!-- cadastro temporário email -->
+<script type="text/javascript">
+function AddMail(){
+
+  if (document.getElementById('descricaoEmail').value == "") {
+    document.getElementById('descricaoEmail').style.backgroundColor = "#FAEDEC";
+    document.getElementById('descricaoEmail').style.border          = "1px solid #E85445";
+    exit();
+  }
+  if (document.getElementById('email').value == "") {
+    document.getElementById('email').style.backgroundColor = "#FAEDEC";
+    document.getElementById('email').style.border          = "1px solid #E85445";
+    exit();
+  }
+
+
+  $(document).ready(function(){
+    var $this = $( this );
+    
+
+    var tr = '<tr>'+
+    '<td>'+$this.find("input[name='email']").val()+'</td>'+
+    '<td>'+$this.find("input[name='descricaoEmail']").val()+'</td>'+
+    '<td><button type="button" class="fa fa-remove btn btn-danger btn-xs" onclick="deleteRowMail(this.parentNode.parentNode.rowIndex)" ></button></td>'+
+    '</tr>'
+    $('#gridMail').find('tbody').append( tr );
+
+    var hiddens = '<input type="hidden" name="emailHidden[]" value="'+$this.find("input[name='email']").val()+'" id="'+$this.find("input[name='email']").val()+'" />'+
+    '<input type="hidden" name="descricaoEmailHidden[]" value="'+$this.find("input[name='descricaoEmail']").val()+'" id="'+$this.find("input[name='email']").val()+'"/>';
+
+    $('#insertMail').find('fieldset').append( hiddens );
+
+          //alert(hiddens);
+
+          $this.find("input[name='email']").val("");
+          $this.find("input[name='descricaoEmail']").val("");            
+
+          return false;
+          
+        });
+}
+</script>
+
+
 <!-- validator -->
 <script>
       // initialize the validator function
@@ -791,52 +888,85 @@ function AddAddress(){
 
       </script>
 
+
       <script type="text/javascript">
-      function validCharClick(id){  
+
+      function deleteRowMail(i){
+        
+        var table, row;
+        
+        table = document.getElementById('gridMail').rows;
+        for(j=0;j< table.length;j++){
+         if (table[j].rowIndex == i){
+           row = table[j];
+           break; 
+         } 
+         
+       }
        
-        document.getElementById(id).style.border = "1px solid #ccc";
-        
+       id = row.firstElementChild.innerHTML;
+       hiddens = document.getElementById('insertMail').getElementsByTagName('input');
+
+       for(k=0;k<hiddens.length;k++){
+        if (hiddens[k].id == id){
+          input = hiddens[k];
+          break;
+        }
       }
 
-      function validCharKeyPress(id){
-        document.getElementById(id).style.backgroundColor = "#fff";
-      }
-      </script>
-
-      <script type="text/javascript"> 
+      input.remove();     
+      document.getElementById('gridMail').deleteRow(i);  
       
-      $(document).ready(function () {
+    }
+
+    </script>
+
+    <script type="text/javascript">
+    function validCharClick(id){  
+
+      document.getElementById(id).style.border = "1px solid #ccc";
+      
+    }
+
+    function validCharKeyPress(id){
+      document.getElementById(id).style.backgroundColor = "#fff";
+    }
+    </script>
+
+    <script type="text/javascript"> 
+    
+    $(document).ready(function () {
+
+      $.getJSON('estados_cidades.json', function (data) {
+        var items = [];
+        var options = '<option value=""></option>';  
+        $.each(data, function (key, val) {
+          options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+        });         
+        $("#estados").html(options);        
         
-        $.getJSON('estados_cidades.json', function (data) {
-          var items = [];
-          var options = '<option value=""></option>';  
+        $("#estados").change(function () {        
+
+          var options_cidades = '';
+          var str = "";         
+          
+          $("#estados option:selected").each(function () {
+            str += $(this).text();
+          });
+          
           $.each(data, function (key, val) {
-            options += '<option value="' + val.nome + '">' + val.nome + '</option>';
-          });         
-          $("#estados").html(options);        
+            if(val.nome == str) {             
+              $.each(val.cidades, function (key_city, val_city) {
+                options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+              });             
+            }
+          });
+          $("#cidades").html(options_cidades);
           
-          $("#estados").change(function () {        
-            
-            var options_cidades = '';
-            var str = "";         
-            
-            $("#estados option:selected").each(function () {
-              str += $(this).text();
-            });
-            
-            $.each(data, function (key, val) {
-              if(val.nome == str) {             
-                $.each(val.cidades, function (key_city, val_city) {
-                  options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
-                });             
-              }
-            });
-            $("#cidades").html(options_cidades);
-            
-          }).change();    
-          
-        });
+        }).change();    
+        
+      });
 
-});
+    });
 
-</script> 
+  </script> 

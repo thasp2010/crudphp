@@ -12,6 +12,7 @@ include_once $root."/crudphp/production/classes/Client.class.php";
 include_once $root."/crudphp/production/classes/Phone.class.php";
 include_once $root."/crudphp/production/classes/Address.class.php";
 include_once $root."/crudphp/production/classes/DAO/ConfigDB.php";
+include_once $root."/crudphp/production/classes/Email.class.php";
 
 if(isset($_GET['option']))
 {
@@ -20,6 +21,7 @@ if(isset($_GET['option']))
     $client = new Client; 
     $phones = new ArrayObject();
     $listAddress = new ArrayObject();
+    $listEmail = new ArrayObject();
 
     $idClient = $_POST['idClient']; 
 
@@ -70,6 +72,23 @@ if(isset($_GET['option']))
 
     }   
 
+    if (isset($_POST['descricaoEmailHidden'])){
+
+      for( $i=0; $i<count( $_POST['descricaoEmailHidden'] ); $i++ )
+      {
+
+        $email  = new Email; 
+
+        $email->setDescription($_POST['descricaoEmailHidden'][$i]);
+        $email->setIdClient($idClient);
+        $email->setEmail($_POST['emailHidden'][$i]); 
+        
+
+        $listEmail-> append($email);
+      } 
+
+    }  
+
     if ($_GET['option'] == 'save') {
 
       if ($Dao->saveClient($client)){
@@ -80,6 +99,10 @@ if(isset($_GET['option']))
 
        if (count($listAddress) > 0){
         $AddressDao->saveListAddress($listAddress);  
+      }
+
+      if(count($listEmail) > 0){
+        $EmailDao->saveListEmail($listEmail);
       }
       
       //echo $qtd;
@@ -97,6 +120,7 @@ if(isset($_GET['option']))
 
     $PhoneDao->DeletePhones($idClient);
     $AddressDao->DeleteAddress($idClient);
+    $EmailDao->DeleteEmails($idClient);
 
     if ( count($phones) >0){
      $PhoneDao->saveListPhone($phones);  
@@ -104,6 +128,10 @@ if(isset($_GET['option']))
 
    if (count($listAddress) > 0){
     $AddressDao->saveListAddress($listAddress);  
+  }
+
+  if(count($listEmail) > 0){
+    $EmailDao->saveListEmail($listEmail);
   }
 
 
@@ -114,7 +142,6 @@ if(isset($_GET['option']))
 }
 
 }     
-
 
 
 }else

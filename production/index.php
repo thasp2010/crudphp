@@ -25,7 +25,7 @@ include"header.php";
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
           <div class="x_title">
-            
+
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -35,10 +35,10 @@ include"header.php";
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-           
+
             <table id="datatable" class="table table-striped table-bordered">
               <thead>                    
-                
+
                 <tr>
                   <th>Código</th>
                   <th>Nome</th>
@@ -46,6 +46,7 @@ include"header.php";
                   <th>Tipo de Pessoa</th>
                   <th>Editar</th>
                   <th>Deletar</th>
+                  <th>E-mail</th>
                 </tr>
               </thead>
 
@@ -72,25 +73,78 @@ include"header.php";
               </th>
               <th>
                 <a href="classes/ClientController.php?option=delete&&id_client=<?php echo($row['id_client']); ?>">
-                  <button type="button" class="btn btn-danger btn-xs">Deletar</button></th>
-                </tr>
-                <?php 
-              }
-              ?>
-              
-            </tbody>
-          </table>
+                  <button type="button" class="btn btn-danger btn-xs">Deletar</button> </a></th>
+                  <th>
+                    <a href="SendMail.php?id_client=<?php echo($row['id_client']); ?>">
+
+                      <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target=".bs-example-modal-lg">Enviar e-mail</button></th>
+
+                    </tr>
+                    <?php 
+                  }
+                  ?>
+
+                </tbody>
+              </table>
+
+
+              <form id="formPhone"  data-parsley-validate class="form-horizontal form-label-left" method="POST" name="formPhone" action="">
+                <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+
+                      <!-- Telefone -->
+                      <div class="x_panel">
+                        <div class="x_title">
+                          <h2>E-mails</h2>
+
+                          <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+
+                          <div class="ln_solid"></div>
+
+                          <table class="table table-bordered" id="grid">
+                            <thead>
+                              <tr>
+                                <th>Email</th>
+                                <th>Selecionar</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                          </table>
+
+                          <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                              <button type="submit" class="btn btn-primary">Cancelar</button>
+                              <button type="submit" class="btn btn-success">Enviar e-mail</button>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>  
+
+                    <!-- end Telefone -->
+                  </div>
+                </div> <!-- end Modal -->
+              </form> <!-- end form Modal -->
+
+
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
-    
+    <!-- /page content -->
+
+
+
   </div>
-</div>
-<!-- /page content -->
-
-
-
-</div>
 </div>
 <?php
 include "footer.php";
